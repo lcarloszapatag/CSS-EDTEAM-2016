@@ -1,0 +1,47 @@
+/*
+	HERENCIA:
+
+	La herencia significa  que elementos ancentros heredan algunas propiedades a sus decendientes
+	Generalmente estilos como fuentes, colores. etc.Mientras que estilos de layout por lo general
+	no se heredan
+*/
+
+h1{
+	color: red;
+}
+p{
+	color: green;
+}
+
+/*
+	CASCADA:
+
+	La cascada viene delnombre css(cascade style sheet) y significa que los estilos que vienen
+	en el ultimo lugar sobreescriben a los que estan antes.
+
+	p{
+	  color:red;
+	  color:green; en este caso se quedacon el verde esta sobreescribiendo la propiedad
+	}
+
+	Se usa mucho la cascada para creaer fallbacks para navegadores viejos.
+
+	p{
+	backgraound:linear-gradient(red,yellow);
+	}
+
+	Ten en cuenta que las cascada tambien se aplica cuando se inserta css con link o import
+
+	Tambien se usa la cascada para simplificar los estilos
+
+	.prev,.next{
+		background:red;
+		color:white;
+		float:right;
+	}
+	.prev{
+		float:left;
+	}
+
+	Ejmplo de como se usa la cascada (arriba)
+*/

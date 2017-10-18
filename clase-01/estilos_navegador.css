@@ -1,0 +1,22 @@
+/*
+	Todos los navegadores tienen sus estilos por defecto
+
+	Es buena idea reescribir esos estilos.
+
+	Ejemplos:
+
+	h1{
+		font-size:1em;
+	}
+	a{
+		text-decoration:none;
+	}
+	p{
+		margin:0;
+	}
+
+	Podrias sobreescribir a mano los estilos. pero existen librerias que ayudan mucho
+	Antiguamenten se usaban reset.css ya no es util.
+
+	La mejor opcion es Normalize.css(Buena practica)
+*/

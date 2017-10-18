@@ -1,0 +1,24 @@
+Como vincular html con css
+Existen 4 metodos:
+	-<link>/*Recomendable*/
+		El elemento link conecta al HTML con un recurso externo.La sintaxis para
+		conectar css es (recomendable en el head):
+		<link rel="stylesheet" href="style.css">
+		En HTML5 no es necesario type="text/css"
+
+	-<style>
+		La etiqueta <style></style> permite embeber código css dentro DEL HTML.
+		Se recomienda ponerla dentro del head
+	-@import
+		La regla @import añade una hoja de estilos externa dentro de otra.Por lo tanto , si se usa dentro del HTML deberia estar dentro de la etiqueta <style>.Su sintaxises la siguiente @import url(ruta/style.css)
+
+	-style=""
+		El atributo style permite insertar codigo css dentro de un elemento HTML su sintaxis es:
+		<h1 style="aqui estilos"></h1>
+
+ESPECIFICIDAD -> Permite determinar que estilo prevalecera cuando hay conflictos de estilos y son 4 conceptos:
+	-Selectores
+	-Herencia
+	-Cascada
+	-Especifidad
+Con esto si dominamos bien seremos buenos en css

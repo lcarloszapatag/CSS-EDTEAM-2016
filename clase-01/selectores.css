@@ -1,0 +1,143 @@
+/*h1{
+	color: black !important;  
+	/*Important en casos extremos no es bueno llenar nuestra hojas de importants pero si 
+	se puede usar con delicadez*/
+
+	/*Cada vez que vemos un important significa que hay conflicto de estilos*/
+
+
+/*Los selectores indican a que elementos HTML van aplicar*/
+/*
+	1.Selectores de etiqueta
+	Se aplican a elementos HTML.Basta indicar el nombre de la etiqueta.
+	body{
+		color:red;
+	}
+	p{
+		color:white;
+	}
+
+	A los estilos aplicadosa los  selectores de etiquetas se les conoce como estilos base
+
+*/
+
+body{
+	 /*selector de etiqueta*/
+}
+
+/*
+
+	2.SELECTORES CLASE
+		Las clasesson atributos de html que se indican con class="" estas clases se usan
+		para manipular el html con css o js
+
+		Para seleccionar la clase con css se utiliza un punto seguido del nombre de la clase
+
+		HTML
+		<p class="alerta">Ha sucedido un error</p>
+
+		CSS
+		.alerta{
+			background:white;
+		}
+*/
+/*	.alerta{
+		color:red;
+		}
+
+
+/*
+
+	3.SELECTORES DE ID:
+
+		Se selecciona un id con el simbolo # segudo de el nombre del id
+		sin embargo puesto que los id son unicos en html, no es recomendable usar id en el css
+
+		HTML
+		<p id="hola">Titulo</p>
+		CSS
+		#hola{
+			color:yellow;
+		}
+*/
+
+/*
+	*NOTAS :lOS ID SE USAN PARA CREAR MARCADORES EN HTML O PARA MANIPULAR EL DOM CON JS.No
+	se recomienda para css
+
+	2.Las clases se pueden usar con css o con js Por lo cual una buena practica es nombrar con el prefijo js- 
+	a lasclases para javascript
+
+	<ul class="menu js-menu"></ul>
+
+	3.Las clases y los ids pueden unificarse en el selector esto significa que podrias seleccioanar a elemenetos
+	que tengan dos clases o un id, o una etiqueta y una clase etc...
+
+	.menu.header{ Tiene que tener las dos clases una etiqueta para poder  aplicar estilos
+		color:green;
+	}
+
+	p.menu#inicial{  unir selectores
+		background:yellow;
+	}
+
+*/
+
+/*.menu.header{
+	background: green;
+}
+
+/*
+	4.SELECTORES DECENDIENTES:
+		Se aplican a un elemento siempre que se ahijo de otro ejemplo
+		padre hijo{
+		
+		}
+
+		*No importa el  nivel del hijo
+		*Siempre se debe intentar lo menos posible
+
+		ul a{
+	
+		}	
+*/
+
+/*ul ul a{
+	/*color: red;
+}*/
+
+
+/*
+
+	ANIDAR SELLECTORES
+
+	Consiste en separar selectores por comas.De esta manera los estilos se aplican a los selectores
+*/
+
+/*h1,p,ul{
+	font-size: 20px;
+}
+/*	DRY: Dont repeat yourself */
+
+/*
+	SELECTOR DE HIJO DIRECTO
+
+	Selecciona solo a los elementos que estan dentor de otro elemento
+
+	padre > hijo{
+	
+	}
+*/
+
+/*body > ul > li >a{
+	color: green;        mala practica
+}*/
+
+/*La mejor practica es utilizar clases y evitar muchos selectores decendientes*/
+/*.level-1{
+	color: green;
+}
+.level-2{
+	color: red;
+}
+*/

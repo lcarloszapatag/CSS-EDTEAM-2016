@@ -1,0 +1,132 @@
+/*
+Textos
+
+Los tipos de letras en el mundo profesional se conocen como familias de fuentes
+tipograficas
+
+	Familias tipograficas -> 
+
+		Son fuentes especificas con nombre comerciales.
+			Arial,Verdana,Time New Roman,Elvetica,Ubuntu
+	
+	Familias genericas ->
+
+		Son grupos de fuentes segun sus caracteristicas:
+		
+		serif ->Con adorno en los remates
+		sans-serif -> Sin adorno en los remates
+		cursive ->letras inclinadas
+		monospace -> Cada caracter ocupa el mismo espacio horizontal(ideal para escribir codigo)
+		
+		El navegador nos reconocen estas fuentes genericos para la web
+
+	Si se asigna una familia tipografica en un estilo,esta deberá estar instalada en su sistema
+	operativo si no  no l a vera
+
+	Dos maneras de solucionarlo :
+
+	1. Definir fuentes alternativas  se recomienda terminar conuna fuente generica
+	2. Usar un proveedor de fuentes de internet
+		-GoogleFonts
+		-AdobeTypeKit
+	3. Almacenar las fuentes en un servidor propio y usar la regla @font-face{} Sin embargo
+	para evitarse el trabajo de convertir  los formatos (para el cross-browser) se recomienda usar generadores
+	como :
+	font squirrel 
+	font2web
+*/
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+	font-family:"STARWARS";
+	src:url("fonts/STARWARS.eot?") format("eot"),
+		url("fonts/STARWARS.woff") format("woff"),
+		url("fonts/STARWARS.ttf") format("truetype"),
+		url("fonts/STARWARS.svg#STARWARS") format("svg");
+font-weight:normal;
+font-style:normal;}
+
+
+h1{
+	font-family: 'STARWARS',cursive; /*cursive esta como fuente alterna al principal*/
+	/*font-family: oswald,verdana,sans-serif;*/
+	font-weight: normal; /*para no tener bold el h1*/
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+body{
+	background: black;
+	margin:0;
+}
+
+
+/*
+Tamaños de fuentes 
+	
+	Unidades de medida para definir el tamañao de la fuente
+
+	px -> Tamaño abosulto
+	em -> Tamaño relativo al contexto
+	rem ->Tamaño relativo al <html></html>
+	%   ->Tamaño normal de una fuente
+	vh  -> 1vh = 1% del alto del viewport
+	vw  -> 1vw=1% del ancho del viewport
+
+	Ojo: el viewport es toda la pantalla de acuerdo al dispositivo
+*/
+html{
+}
+h1{
+	font-size: 1em;
+}
+p{
+	color: white;
+	/*font-size: 2em;*/
+}
+p span{
+	/*font-size: 2rem;*/
+}
+li{
+	text-align: left;
+	color: #fff;
+	font-size: .7rem; /*rem para listas*/
+}
+span{
+	color: white;
+	font-family: starwars;
+	font-size: 50vh;
+	line-height: 100vh; /*altura de la linea*/
+	text-align: center; /*no funciona por que ese inline*/
+	display: block; /*para convertirlo en bloque*/
+}
+/* El body por defecto tiene un font-size:16px */
+
+
+/*
+	Otras propiedades de los textos:
+
+	line-height:determina la altura de la linea
+	text-transform:lowercase|uppercase|capitalize->primeraletra en miniscula
+	text-align:center|right|left|justify --> solo se aplica a elementos bloque 
+	font-weigth: ancho de las fuentes
+	bold | normal
+	font-style: italic 	| normal
+	text-decoration: underline|none
+	letter-spacing: valor-especifico como px o rem em determina la separacion de las letras o caracteres
+	text-indent: mueve la primera linea de un bloque de texto("sangria");
+*/
+p{
+	line-height: 3;
+	text-transform: capitalize;
+	text-indent: 200px;
+}
+div{
+	width: 300px;
+	height: 100px;
+	background: yellow;
+	font-size: 3em;
+	text-align: center;
+	line-height: 100px; /*oara centrar vertical y horizontal line-heignt tiene que ser igual a la altura*/
+	
+}
+

@@ -1,0 +1,107 @@
+/*
+	Herencia :
+
+	El valor inherit fuerza a un elemento a heredar
+	la propiedad correspondiente de su ancestro mas
+	cercano.
+*/
+
+a{
+	color: inherit;
+}
+/*En la lista sale negro porque herada del li 
+arriba hereda del p el inherit hace heredar
+estilos de fuetne , color , etc.. del padre
+*/
+
+/*---------------------------------------------
+
+	Especificidad :
+
+	Es un valor que adquieren los selectores y que determinan que regla
+	css o que estilo se aplica a un elemento cuando existen conflictok
+
+	!important --> siempre gana sobre cualquier especificidad.
+	Por eso es que es una mala practica...
+	Bootstrap es un ejemplo de important para que no puedas modificar
+	su diseño
+
+
+.parrafo{
+	especificidad -> 10
+	color: steelblue;
+}
+p#parrafo{
+	especificidad -> 101
+	color: purple !important;
+}
+#parrafo{
+	especificidad -> 100
+	color: blue !important;
+}
+p{
+	especificidad -> 1
+	color: orange !important;
+}
+
+*/
+
+/*La especificidad vale mas que la cascada*/
+/*El id tiene mas especificidad que la clase.. lo qye le gana
+al id es style="" estilo en linea pero no es recomendable 
+usarlo... Orden->
+!important > especificidad > cascada
+
+Ojo-> 
+Cascada es cuando das un valor inicial p color:red;
+mas abajo das otro p color:green;
+por cascada la etiqueta p de darle un valor rojo 
+automaticamente se cambia a verde porque escascada
+*/
+
+/*¿Como se calcula la especificidad ?
+
+Tipos de selectores:
+	Etiqueta             ->1      0,0,0,1
+	Clases y seudoclases ->10     0,0,1,0
+	ID 					 ->100    0,1,0,0
+	Estilos en linea 	 ->1000   1,0,0,0
+
+La especificidad se suma
+*/
+
+
+.parrafo{
+	/*especificidad -> 10*/
+	color: steelblue;
+}
+p#parrafo{
+	/*especificidad -> 101*/
+	color: purple;
+}
+#parrafo{
+	/*especificidad -> 100*/
+	color: blue;
+}
+p{
+	/*especificidad -> 1*/
+	color: orange ;
+}
+.parrafo#parrafo{
+	/*especificidad -> 110*/
+	color: yellow;
+}
+p.parrafo#parrafo{
+	/*especificidad -> 111*/
+	color: skyblue;
+}
+body p.parrafo#parrafo{
+	/*especificidad -> 112*/
+	color: salmon;
+}
+html body p.parrafo#parrafo{
+	/*especificidad -> 113*/
+	color: peru;
+}
+/*98-105 es una exageracion por temas de conocimiento
+es bueno cononcer*/
