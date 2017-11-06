@@ -1,0 +1,82 @@
+/*
+	La propiedad abreviada  (shorthand) "font".	
+
+	Agrupa a las siguientes propiedades:
+
+		Orden del font(resumido)
+		font-weight:
+		font-style: 
+		* font-size: / *line-height: 
+		* font-family:
+	
+	*Obligatorios
+
+	Es obligatorio que esten al menos font-size y font-family(font-family siempre al final)
+
+	Si se incluye line-height debe ir despues de font-size y separado por un slash(/)
+*/
+
+h1{
+
+	/*orden*/
+	font:normal bold 3em/5em Georgia,serif;
+
+
+}
+
+div{
+	width: 300px;
+	background: yellow;
+}
+
+/*Controlar el flujo y espaciado de los textos 
+
+	Separacion de letras y palabras
+		letter-spacing
+		
+		word-spacing
+		
+		word-break:break-all | keep-all |none; corta las palabras donde  termina el contenedor
+		
+		word-wrap: break-word; corta las palabras que son mas anchas que el contenedor
+
+		white-space : (controla los espacios en blaco y saltos del linea) 
+					  normal(los ignora)
+				 	  pre(los trata ocmo la etiqueta <pre></pre>)
+				 	  nowrap (con nowrap no hay saltos de linea ni saltos salvo que pongas un br)
+					  pre-wrap (igual que el pre pero permite saltos de linea al final del contenedor)
+					  pre-line (respeta los saltos de linea pero omite los espacios)
+
+		text-overflow : clip | ellipse
+						(Determina si un texto que se escapa de su contenedor se cortara en seco
+						o se mostrara tres puntos solo funciona si al contenedor se le aplica 
+						overflow hidden)
+*/		
+
+
+
+div{
+	font-style: italic;
+	/*letter-spacing: .03em;
+	word-spacing: .1em;*/
+	/*text-align: justify;
+	word-break: break-all; 
+	hyphens: auto;
+	*/
+	word-wrap: break-word;
+	/*no es bueno justificar textos */
+	white-space: pre-wrap;
+}
+
+.pre{
+	white-space: pre-line;
+
+}
+.code{
+	width: 300px;
+	background: green;
+	white-space: pre;
+	overflow: hidden; /*oculta barra inferior*/
+	text-overflow: clip; /*puntitos*/
+	
+}

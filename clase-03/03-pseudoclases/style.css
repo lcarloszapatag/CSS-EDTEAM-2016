@@ -1,0 +1,128 @@
+/*
+
+	Las pseudoclases son tipos de selectores que se activan en determinadas 
+	circunstancias se escriben con :
+	Ej:
+		:hover{
+	
+		}
+	Con excepcion de ::selection 
+
+	:hover -> Indica cuando se pasa el cursor por encima del elemento
+	
+	:hover{
+		color: blue;
+	}
+	p:hover{
+		color: green;
+	}
+	p :hover{
+		color: yellow;
+	}
+
+	:active -> Es cuando se hace click
+	:visited ->un enlace que ya se visito
+	:focus ->un campo de formulario seleccionado
+	:empty ->selecciona elementos vacios
+	not() -> selecciona a elementos que no coincidan con 
+	el selector pasado como parametro
+	::section ->para aplicar estilos al momento de seleccionar
+	:target -> selecciona el destino de un enlace interno
+*/
+h1:active{
+	color: red;
+}
+input:focus{
+	background: yellow;
+}
+div{
+	height: 100px;
+}
+div:empty{
+	background: black;
+	display: none; /*para desaparecer*/
+}
+p:not(.not){
+	/*background: blue;*/
+}
+::selection{
+	color: white;
+	background: purple;
+}
+
+h1::selection{
+	color: red;
+	background: yellow;
+}
+
+
+#destino{
+	display: none;
+}
+#destino:target{
+
+	display: block;
+	background: #333;
+	color: white; 
+}
+
+
+/*
+	Selectores avanzados:
+		
+		:first-child; encuentran al primer hijo y al ultimo hijo
+		:last-child;
+
+		:first-of-type
+		:last-of-type
+		Selecciona alprimero y al ultimo hijo segun al elemento
+
+
+		Child para todos los hijos y type por tipo
+
+		:nth-child()
+		:nth-of-type()
+			Reciben parametros:
+				*numero -> 5(selecciona al 5to elemento)
+				*multiplo de n ->2n(selecciona de 2 en 2)
+				*formula ->3n+1(selecciona a 1,4,7 )
+				*even/odd ->pares o impares
+
+
+		Trucos :
+		 *seleccionar los primers 4 elementos    	-n+4
+		 *seleccionar lo elementos apartir del 4 	 n+4
+*/
+
+
+
+article :first-child{
+	color: red;
+}
+/*article :last-child{
+	color: red;
+}*/
+p:nth-of-type(2){
+	color: red;
+}
+
+li:nth-child(n+4):nth-child(even){
+	background: teal;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
