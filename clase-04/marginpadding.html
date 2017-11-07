@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Margin y Padding</title>
+	<style type="text/css">
+		
+		[class^="box"]{
+			background: red;
+			width: 200px;
+			height: 200px;
+		}
+		.box1{
+			margin-bottom: 2em;
+			/*margin-top: -50px; ejemplo de margin negativo*/
+
+		}
+		.box2{
+			margin-top: 1em;	
+		}
+
+		.padre{ /*para ver el margen del hijo*/
+			background: yellow;
+			/*float: left;*/
+			/*overflow: hidden;*/
+			/*padding: 1em;*/
+		}
+		.hijo{
+			margin-top: 2em;
+		}
+		.ratio{
+			background: red;
+			padding-bottom: 50%;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Margin Y Padding</h1>
+	<!--
+		Maring -> espacio entre un caja y las adyacentes.Son cuatro tipos de margenes
+					1.Top     (1)
+					2.Bottom  (2)
+					3.Left    (3)
+					4.Right   (4)
+
+		Tambien se puede escribir con un  shorthand resumido e importante!
+			
+			margin: 1em (1,2,3,4)
+			margin: 1em(1,2) 2em(3,4)
+			margin: 1em(1) 2em(3,4) 3em(2)
+			margin: 1em(1) 2em(4) 3em (2) 4em(3)
+
+		Tips con los margenes:
+			1.Puedes usar margenes negativos para mover elementos.
+			2.Puedes usar margin-left: auto; y margin-right:auto; para centrar
+			elementos de bloque con ancho definido 
+			ej. margin:0 auto; o margin:3 auto;
+	-->
+	
+	<!--
+
+		COLAPSADO DE MARGENES VERTICALES(ADYACENTES)
+		  	
+		  	*Cuando hay margenes verticales que se superponen el mayor siempre absorbe al menor
+		COLAPSADO DE MARGENES VERTICALES 2(PADRE HIJO)
+			
+			*El margen vertical del hijo se escapa del padre. Para solucionarlo (en el padre):
+				1.Padding
+				2.Overflow:hidden;
+				3.float:right | left; (no recomendado)
+	-->
+	<!--<div class="box1"></div>
+	<div class="box2"></div>-->
+
+	<div class="padre">
+		<div class="hijo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, autem delectus voluptatibus, earum suscipit repellendus, sunt tempore optio ea fugiat asperiores ad! Optio, maiores, sapiente. Delectus illum beatae, vero voluptas?</div>
+	</div>
+
+
+
+	<!--Padding 
+			
+			Es la separacion entre el contenido y el limite de la pagina 
+				1.Top
+				2.Right
+				3.Bottom
+				4.Left
+
+			Shorthand es lo mismo que el margin
+	
+		Tips
+		 	1.Los padding no colapsan
+		 	2.No hay padding negativos
+		 	3.Los padding con porcentajes pueden usarse para crear
+		 	cajas con una proporcion
+	-->
+	<div class="ratio">
+		
+	</div>
+
+
+
+</body>
+</html>

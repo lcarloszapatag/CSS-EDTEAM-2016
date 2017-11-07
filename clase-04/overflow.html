@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Overflow</title>
+	<style type="text/css">
+		
+		/*La propiedad overflow determina la visibilidad del contenido que desborde
+		 del contenedor*/
+		.container{
+			width: 300px;
+			height: 100px;
+			background: yellow;
+			overflow: auto;
+		}
+		.content{
+			width: 400px;
+			font-size: .8em;
+		}
+		/* overflow tiene las siguientes propiedades 
+
+			1.visible (default)
+			2.hidden (oculta el contenido desbordado)
+			3.auto (crea scroll de ser necesario)
+			4.scroll (crea un scroll siempre)
+
+
+			CSS3 trae algunas novedades :
+				overflow-x
+				overflow-y
+
+			Ademas se pueden pasar dos valores a overflow(shorthand)
+
+			overflow: valorx valory;
+		*/
+	</style>
+</head>
+<body>
+	<h1>Overflow</h1>
+	<div class="container">
+		<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eaque placeat ipsum, deleniti commodi iure velit nostrum molestias, libero vitae deserunt ratione delectus. Repudiandae, eius ea dolores nam voluptatem eos.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/*
+¿Que es un box-model?
+	
+	El conjunto de algoritmos por los cuales el navegador
+	dibuja una caja en pantalla con todas sus propiedades
+
+¿Que es una caja?
+	
+	Es un rectangulo definido por todo el elemento al renderizarse
+	la pagina.
+
+
+Elementos de una caja
+
+	INTERNOS
+		-content:
+			El contenido
+		-padding:
+			El espacion entre el contenido y el limite de la caja
+		-border:
+			Linea que se dibuja alrededor de la caja
+	EXTERNOS
+		-margin:
+			El margin es la separacion de la caja y las adyacentes(las demas)
+
+
+¿Como se definen las dimensiones de una caja?
+		
+		Normalmente las dimensiones son dimensiones declaradas mas padding total
+		y border total (content-box + padding-box + border-box)
+
+		Si las dimiensiones no estan declaradas lo normal es el :
+
+		ancho:
+				total del contenedor (bloque)
+				total del contenido (inline)
+		alto:
+				definido por su contenido
+
+	    Sin embargo css3 nos trajo este estilo box-sizing (css3)
+	    teniendo tres posibles valores:
+	    		
+	    		1.content-box (default)
+	    		2.padding-box 
+	    		3.border-box  (recomendado, el padding y border se calculan por dentro)
+
+	    Controlo como se interpreta el tamaño  de la caja
+		
+		Recomendación :
+			Asignar 
+				box-sizing:border-box; 	
+			a todos los elementos siempre
+
+*/
+*{
+	box-sizing: border-box;
+}
+
+.box1{
+	width:400px;
+	height: 200px;
+	background: yellow;
+	padding: 20px;
+	border: 2px solid black;
+	box-sizing: border-box;
+
+}
+
+
+/*
+	Dimensiones en porcentajes
+		1.Siempre se calculan respecto al ancho del contenedor
+		2.Es imposible definir alturas en porcentajes(con ciertas excepciones)
+
+*/
+.box2-container{
+	background: yellow;
+	width: 500px;
+}
+.box2{
+	border: 1px solid black;
+	width: 50%;
+	padding-top: 10%;
+}
+

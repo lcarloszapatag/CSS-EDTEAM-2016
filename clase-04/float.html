@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Float</title>
+	<style type="text/css">
+		/*Float : saca a un elemento del flujo y lo envia a la derecha o a la izquierda
+		.El elementosiguiente lo envolvera de ser posible
+			
+			float:(valores)
+				right
+				left
+				none
+
+
+		*/
+		[class^="img"]{ /*selector de elementos*/
+			float: right;
+			margin-left: 1em; 
+		}
+		[class^="container"]{
+			background: yellow;
+			/*display: table;*/
+			/*overflow: hidden*/
+			margin-bottom: 1.3em;
+		}
+		/*clearfix recomendado*/
+		.container:before,
+		.container:after{
+			content: "";
+			display: table;
+			clear: both; /*el both no permite que haya flotantes a las I y D*/
+		}
+
+		/*El elemento de un elemento flotado deja de contenerlo Para solucionarlo:
+
+			1.overflow:hidden;
+			2.display:none;
+			3.clearfix con un div vacio(no recomendado)
+			4.clearfix con pseudoelementos (recomendada)
+
+
+			La propiedad clear se usa  para que un elemento  no reciva elementosflotados
+			 a sus lados
+
+		*/
+			
+
+		.parrafo2{
+			clear: right;
+		}
+
+
+
+		*{
+			box-sizing: border-box;
+		}
+
+		.gallery-container{
+			/*line-height: 0; para que no aya altura delinea en las imagenes o si no display:block*/
+			float: left;
+			width: 23%;
+			margin: 1%;
+			border: 1px solid #ccc;
+			padding: 3px;
+		}
+		.gallery-item{
+			display: block;
+			width: 100%;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Float</h1>
+	<!--
+	<div class="container">
+		<img class="img" src="http://lorempixel.com/300/200">
+		
+		<p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, unde, dolore? Voluptates non veritatis culpa assumenda, eum aspernatur quia rerum blanditiis pariatur enim, accusantium, tempore fuga impedit temporibus. Sint, tempore.</p>
+		
+	</div>	
+
+
+	
+	<div class="container2">
+		<img class="img2" src="http://lorempixel.com/300/200">
+		
+		<p class="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, unde, dolore? Voluptates non veritatis culpa assumenda, eum aspernatur quia rerum blanditiis pariatur enim, accusantium, tempore fuga impedit temporibus. Sint, tempore.</p>
+		
+	</div>-->
+
+
+	<!--ejercicio-->
+	<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+	
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+	
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+	
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+	
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+	
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+	
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>
+		<div class="gallery-container">
+		<img class="gallery-item" src="http://lorempixel.com/200/200">
+	</div>	
+</body>
+</html>
