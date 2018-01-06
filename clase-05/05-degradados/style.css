@@ -1,0 +1,25 @@
+/*
+  Los degradados nos permiten poner un fondo  de varios colores. Existen dos tipos
+  Los lineales ( linear-gradient) y circulares (radiant-gradient)
+*/
+[class$="gradient"]{
+  width: 400px;
+  height: 250px;
+  border: 2px solid black;
+  margin: 1em auto;
+}
+/*Los degradados se consideran background-image no color
+  en los parentesis van separados los colors como podemos ver ahi
+
+  Tabmien se puede definir una para cada color:
+    linear-gradiant(red 40%,color2 30px);
+
+
+  Para poner un angulao se pone antes de l color un  deg
+*/
+.linear-gradient{ /*funciona en lineales 50deg  antes del color en este caso yellow para diagonal*/
+  background-image: linear-gradient(yellow,red,blue,purple,white,black,skyblue);
+}
+.radial-gradient{
+  background-image: radial-gradient(yellow,red);
+}

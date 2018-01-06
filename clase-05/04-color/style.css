@@ -1,0 +1,21 @@
+
+/*Los colores se pueden indicar de varias formas usando
+
+  1.Palabras clave
+     En css3 son 147 palabras claves para colores.
+     http://www.colors.commutercreative.com/grid/
+  2.Hexadecimal
+    Los valores van de 0 a F , TAMBIEN los valores van en Pares
+    (RRGGBB)rojo verde y azul y siempre comienzan con un simbolo #
+    Si los dos valores de cada pareja son iguales se pueden abreviar
+    por ejemplo
+    #55ff33 = #5f3
+
+  3. RGB y RGBA
+    Se indican lo tres canales red green y blue RGB en valores de 0 a 255.Para el caso de rgba existe un
+    4 canal el a que es alpha que  indica la opacidad (de 0 a 1)
+*/
+
+body{
+  background: rgba(255,0,0,0.5);
+}

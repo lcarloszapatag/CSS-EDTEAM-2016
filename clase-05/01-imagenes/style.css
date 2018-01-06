@@ -1,0 +1,79 @@
+/*
+  Las Imagenes no tiene propiedades especificas en CSS.
+
+  Tips :
+
+  1. Imagenes Responsive
+    Se recomienda poner esta regla siempre en css:
+    img{
+      max-width:100%;
+      heigth:auto (opcional)
+  }
+  Otra opcion es
+    width:100%;
+*/
+img{
+  max-width: 100%;
+}
+
+/*
+  2.Espacio debajo de las Imagenes
+    Las Imagenes son inline por lo tanto tiene una altura de linea un line-heigth. Para solucionarlo existen dos conocidos
+    * Al contenedor
+        line-height:0;
+    * A la imagen misma convertirla en bloque
+        display:block;
+*/
+.img-container{
+  background: yellow;
+  /*line-height: 0;*/
+}
+.img-container img{
+  /*display: block;*/
+}
+
+/* 3. Centrado de Imagenes
+
+    Dos metodos :
+      *Hacer que la imagen sea block y usar margenes automaticos.
+        display:block;
+        margin-left:  auto;
+        margin-rigth:auto;
+
+      *Aplicar al contenedor  :
+        text-align:center; (siempre que la imagen no sea block)
+*/
+.img-container{
+  margin-bottom: 1em;
+  text-align: center;
+  line-height: 0;
+}
+.alone-img{ /*Forma de centrar y ya no usando maring:0 auto;*/
+  display: block;
+  /*
+  margin-left: auto;
+  margin-right: auto;
+  */
+  margin: 0 auto 2em;
+}
+
+/*
+  4. Centrado vertical respecto a un texto
+*/
+.vertical-align{
+  margin-bottom: 2em;
+}
+.vertical-align img,.vertical-align span{
+  vertical-align: middle;
+}
+.vertical-align2{
+  padding-bottom: 2em;
+  display: table;
+}
+.vertical-align2 .cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.vertical-align2 img{
+  margin-right: 120px;
+}

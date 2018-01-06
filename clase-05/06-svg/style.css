@@ -1,0 +1,26 @@
+.vector{
+  width: 500px;
+  height: 300px;
+  border: 2px solid black;
+  margin: auto;
+  display: block;/*el svg no es display block aqui lo convertimos a blque*/
+}
+circle{
+  /*background-color: red; esto en vectores no exites*/
+  fill:none;
+  stroke:green;
+  stroke-width:10px;
+  stroke-dasharray:628px;
+  stroke-dashoffset:50px;
+  animation:borde 2s linear;
+  /*stroke equivalente a border-color
+  stroke-width a border-width
+  stroke-dasharray indica la separacion del trazo*/
+}
+@@keyframes borde {
+    from{
+      stroke-dashoffset:628px;
+    }to{
+      stroke-dashoffset:50px;
+    }
+}

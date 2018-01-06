@@ -1,0 +1,160 @@
+
+/*
+  La propriedad background es en realidad un shorthand de varias propriedades
+
+  background-color
+  background-postion
+  background-imag
+  background-size
+  background-attachment
+  background-origin
+  background-repeat
+  background-clip
+*/
+*{
+  box-sizing: border-box;
+}
+
+[class^="bg-"]{
+  width: 31.33%;
+  float: left;
+  margin: 1%;
+  border: 2px solid black;
+  height: 180px;
+}
+
+/*Background color*/
+.bg-color{
+  background-color: red; /*define un color de fondo solo eso*/
+}
+
+/*background image*/
+.bg-image{
+  background-image: url(img/land.jpg);
+}
+/*
+  background-size : x y(y es opcional se calculaautomaticamente sino existiera);
+  background-size:
+  auto   tamaño original
+  cover  cubrir por completo la caja
+  contain  la caja contiene por completo al fondo
+*/
+.bg-size{
+  background-image: url(img/land.jpg);
+  background-size: contain;
+}
+
+
+
+/* background-repeat */
+
+.bg-repeat {
+  background-image: url(img/bird1.png);
+  background-size: 50%;
+  background-repeat: repeat-y;
+  /*
+    repeat | no-repeat |  repeat-x | repeat-y
+  */
+}
+
+
+/* background-position: x y;
+    * si se omite el valor para y, este se toma desde el valor para x.
+    * El origen es la esquina superior izquierda (hacia abajo y hacia la derecha son los valores positivos).
+    * tambien admite keywords
+      para X -> left, center, right
+      para Y -> top, center, bottom
+
+*/
+
+.bg-position {
+  background-image: url(img/bird1.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: left top; /*0,0*/
+}
+
+
+/*background-attachment
+
+  Permite vincular el fondo a su caja correspondiente (scroll) o al viewport (fixed)
+
+*/
+.bg-attachment{
+  background-image: url(img/land.jpg);
+  background-attachment: fixed; /*se pega al viewport la imagen*/
+  background-size: 100%;
+}
+body{
+
+  /*background-image: url(img/land-blur.jpg);*/
+  padding-bottom: 100em;
+  padding-top: 10em;
+  background-attachment: fixed;
+  background-size: 100%;
+
+}
+/*.parrallax{
+  background-image: url(img/land.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+} */
+
+
+/* background-clip
+
+  Indica que parte cubrira el fondo
+    content-box
+    padding-box
+    border-box
+*/
+.bg-clip{
+  border: 10px dotted black;
+  background-color: yellow;
+  background-clip: border-box;
+  padding: 2em;
+}
+
+
+/*Background origin
+Es parecido pero indica donde comienza el fondo
+content-box
+padding-box
+border-box
+*/
+.bg-origin{
+
+  border: 10px dotted black;
+  background-image: url(img/bird1.png);
+  background-size: contain;
+  background-position: right center;
+  background-repeat:  no-repeat;
+  background-origin: padding-box; /*Aqui afecta a la imiagen*/
+  /*background-clip: border-box;*/
+}
+
+/*
+  Fondos Multiples
+  En CSS3 se puede asignar fondos multiples asignados por comas.Todas las propriedades
+  de los fondos deben serpararse entre comas en el mismo orden.
+
+*/
+
+.bg-multiple{ /*Multiples IMagenes y propiedades de  acuerdo al orden*/
+  background-image: url(img/bird1.png),
+                    url(img/bird2.png),
+                    url(img/land.jpg);
+  background-size: 20%, 40%, cover;
+  background-repeat: no-repeat;
+  background-position: right bottom , left top , center center;
+}
+/*El shorthand permite poner las propriedades en cualquier orden excepto
+background-size y position que deben ir siempre juntos osea position y size y separados
+por un /(slash)*/
+.bg-shorthand{
+  background: url(img/bird1.png) right bottom / 40% no-repeat,
+              url(img/bird2.png) left top /50% no-repeat,
+              url(img/land.jpg) center center / cover no-repeat;
+}
