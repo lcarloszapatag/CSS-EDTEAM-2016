@@ -1,0 +1,96 @@
+/*
+Archivo position.txt
+*/
+/*
+h1{
+  background: yellow;
+}
+p{
+  background: green;
+  margin-top: -3em;
+}*/
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding-bottom: 100em;
+}
+div{
+  /*height: 50px;*/
+}
+.div1{
+  background: yellow;
+  margin-bottom: 1em;
+
+}
+.div2{
+  background: green;
+  /*margin-top: -1em;*/
+}
+
+
+.parrafo{
+  margin-bottom: 1em;
+}
+.p-container{
+  border: 2px solid black;
+  background: red;
+  padding: 2em;
+  background-clip: content-box;
+
+}
+.p-content{
+  border:  2px solid black;
+  margin: 0;  /*todos los navegadores le dan un margen por defecto al parrafo <p>*/
+  position: relative; /*elemento posiciodado ahora podemos mover con el offset*/
+  top: 30px;
+  /*left: 130px;*/
+}
+.footer{
+  background: steelblue;
+  color: white;
+  width: 100%;
+  position: fixed;  /*lo pega al viewport*/
+  bottom: 0; /*se pega abajo por que su contexto el es viewport y el viewport es nuestra arear en la pantalla que vemos
+  al hacer un scroll el viewport es lo que subey baja en nuestro scroll*/
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+/*abosulte*/
+.p-container2{
+  margin-top: 3em;
+  border: 2px solid black;
+  padding: 1em;
+  position: relative; /*lo metemos como contexto para el absolute y toma este posicionamiento */
+}
+.p-content2{
+  background: yellow;
+  position: absolute;
+  top: 10px; /*lo toma desde el viewport desde arriba*/
+  padding: 10px;
+}
+
+
+.posicionado{
+  background: tomato;
+  margin-top: 10em;
+  /*con esto el hola mundo se comoda al flujo , con el relative mantiene el flujo*/
+  position: absolute;
+}
+
+
+
+.span1{
+  background: red;
+  position: relative;  /*sigue manteniendoes en el flujo deja su espacio aun*/
+  top: 100px;
+}
+.span2{
+  background: green;
+  position: absolute; /*desaparece del flujo tomando lo siguiente en su lugar */
+  top: 190px;
+}

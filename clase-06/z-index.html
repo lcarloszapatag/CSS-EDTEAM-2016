@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>z-index</title>
+  <style>
+
+        .z-index{
+          width: 500px;
+          height: 500px;
+          border: 2px solid black;
+          margin: 2em auto;
+          position: relative; /*para moverlo respecto a este div principal*/
+        }
+        [class^="item-"]{ /*a los que comienzan con item se usa el ^*/
+          width: 180px;
+          height: 180px;
+          position: absolute;
+          line-height: 200px;
+          text-align:center;
+          font-size: 3em;
+        }
+        .item-1{
+          background: pink;
+          top: 50px;
+          left: 50px;
+          z-index: 10; /*recomendacion dejar un rangocomo este , que los numeros no este
+          consecutivos*/
+        }
+        .item-2{
+          background: green;
+          top: 150px;
+          left: 150px;
+          z-index: 5;
+        }
+        .item-3{
+          background: gold;
+          top: 250px;
+          left: 250px;
+          /*z-index: -10;*/ /*Padre no tiene z-index aqui recien el hijo  podra estar atras*/
+        }
+        .item-3 span{
+          background: red;
+          width: 100px;
+          height: 100px;
+          display: block;
+          position: absolute;
+          top: 120px;
+          left: 120px;
+          z-index: -1; /*El hijo se va atras siempre y cuando el padre no tiene z-index*/
+        }
+
+  </style>
+</head>
+<body>
+  <h1>Z-INDEX</h1>
+    <div class="z-index">
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3">3 <span>Hijo</span></div>
+    </div>
+
+
+</body>
+</html>

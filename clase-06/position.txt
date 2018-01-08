@@ -1,0 +1,97 @@
+
+  POSITION
+
+1.Modelo de Layout (Layout Model)
+  Es el conjunto de algoritmos por los que el navegador posiciona
+  elementos en la pantalla y los relaciona con la posicion de los demas.
+
+  lAS SIGUIENTES PROPIEDADES SON PARTES DEL LAYOUT MODEL :
+      * display
+      * position
+      * float
+      * margin
+2.POSITION : Es una propiedad que permite posicionar un elemento en cualquier
+            lugar especifico de la pantalla.
+
+            Valores :
+            * static   (no posicionado) (no tan usado)
+            * relative (posicionado)
+            * absolute (posicionado)
+            * fixed    (posicionado)
+
+            Valores experimentales : (Actualemnte ya debe ser estandar)
+            * sticky
+            * page
+            * center
+
+    * Un elemento en position static no se considera posicionado por que su ubicacion es la que
+      la corresponde por el flujo
+
+3. FLUJO
+  El flujo es la secuencia de aparacion de los elementos en el navegador.Esta secuencia coincide
+  con el codigo.Cuando alteramos esta secuencia estamos rompiendo el flujo(lo hacemos siempre
+  al construir layouts)
+
+4. ELEMENTOS POSICIONADOS
+  Se considera posicionado  aun elmento con la propiedad position y cualquiera de los valores
+  SIGUIENTES :
+    * relative
+    * absolute
+    * fixed
+
+  Desde el momento que un elemento que esta posicionado tiene la capacidad de moverse en el 3 ejes
+    X Y Z con las siguientes propiedades :
+
+    Propiedades offset (x,y)
+      top, bottom (y)
+      rigth, left (x)
+
+    Propiedad para el eje z
+      z-index
+        *El eje z determina el apilamiento de las capas ( es decir , cual va encima o debajo cuando estas se superponen).
+        Por definición:
+          1. Un elemento esta por encima de los que vienen detras del codigo.
+          2. Un elemento está por encima de sus ancestros
+
+El position quiere decir que pondemos mover cualquier elemento en el eje x y o z
+
+
+5. POSICION INICIAL DE LOS ELEMENTOS POSICIONADOS
+
+    ¿Donde se posiciona un elemento posicionado?
+      (sin moverlo manualmente en los ejes)
+      Inicialmente, los elemenots posicionados nose mueven (salvo que lo movamos con offset)
+
+6. CONTEXTO
+    El contexto de un elemento posicionados es un area(rectangulo) que define desde donde se
+     contara los offset(top,left,rigth,bottom) .
+     Contexto de los atributos:
+
+     OJO:
+          relative: su posicion inicial
+          fixed   : el viewport (dato : el viewport cambia de estado mientras haya un scroll + el viewport es la parte que vemos)
+          absolute : su ancestro posicionado mas cercano (si no hay toma al viewport)
+
+!importante
+        Ejemplo z-index e position absolute (https://www.w3schools.com/cssref/tryit.asp?filename=trycss_zindex)
+
+        Con el posicionamiento absoluto, un elemento puede colocarse en cualquier lugar de una página
+
+7. DIMENSIONES DE LOS ELEMENTOS POSICIONADOS
+     * Si un elemento posicionado tiene unas DIMENSIONES declaradas (width y heigth) conservara sus dimensiones
+     * Si no tenia dimensiones declaradas se ajustara a su contenido(para absolute y fixed)
+     * Si no tenia dimensiones declaradas y relative conserva sus dimensiones iniciales.
+
+8. ESPACIO EN EL FLUJO
+
+    * Para el relative conserva su espacio al moverse deja un hueco vacio
+    * Mientras que absolute y fixed pierden su espacio en el flujo (como si no existieran y podemos ubicar en el layout
+    sin desordernar nada)
+
+9. CONTROLAR EL APILAMIENTO
+
+      La propiedad z-index indica que elemento aparece arriba  o abajo sus valores puede ser positivios o negativos
+      a mayor numero mas arriba en el apilamiento
+
+      * Un Hijo solo puede estar detras de su padre si es que tiene un z-index negativo y el padre
+      no tiene un z-index declarado
