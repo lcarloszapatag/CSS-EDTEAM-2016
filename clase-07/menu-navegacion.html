@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu-Navegacion</title>
+    <style>
+        /*
+            TIP:
+                Las listas <ul> <ol> tiene las siguientes propiedades asignadas por el navegador:
+                margin-top
+                margin-bottom
+                padding-left
+
+            Es recomendable para menus poner todas estas propiedades en 0
+
+            .menu{
+                margin-top:0;
+                margin-bottom:0;
+                padding-left:0;
+                list-style:none;
+
+            }
+
+        */
+        .main-menu{
+            margin-top:0;
+            margin-bottom:0;
+            padding-left:0;
+            list-style:none;
+            background: teal; /*por collapsed de float se necesita para que colore un display:table*/
+            display: table;
+            width: 100%;
+        }
+        .main-menu__item{
+            float: left; /*para que los items esten a lado de uno*/
+
+        }
+        .main-menu__item:hover{
+            background: rgba(0,0,0,.3);
+        }
+        .main-menu__link{
+            text-decoration: none;
+            color: #fff;
+            display: block;/*para que podamos darle un line-heigth y padding*/
+            line-height: 2.5; /*con esta propiedad tambien especificamos la altura*/
+            padding: 0 1.2em;
+        }
+        /*sub-menu*/
+        .main-menu--child{
+            position: absolute; /*arregla lo que se desmaqueto anteriormente*/
+            width: 8em;
+            display: none; /*para ocultar el submenu*/
+        }
+        .main-menu__item--child{
+            float: none;
+        }
+        /*Mostrar submenu*/
+
+        .main-menu__item:hover > .main-menu--child{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+        <!--/*Metodologia BEM (Bloque elemento modificador)*/-->
+
+    <ul class="main-menu">
+        <li class="main-menu__item">
+            <a href="" class="main-menu__link">
+                Item 1
+            </a>
+        </li>
+        <li class="main-menu__item">
+            <a href="" class="main-menu__link">
+                Item 2
+            </a>
+            <ul class="main-menu main-menu--child">
+                <li class="main-menu__item main-menu__item--child">
+                    <a href="" class="main-menu__link main-menu__link--child">
+                        Item 1
+                    </a>
+                </li>
+                <li class="main-menu__item main-menu__item--child">
+                    <a href="" class="main-menu__link main-menu__link--child">
+                        Item 2
+                    </a>
+                </li>
+                <li class="main-menu__item main-menu__item--child">
+                    <a href="" class="main-menu__link main-menu__link--child">
+                        Item 3
+                    </a>
+                </li>
+                <li class="main-menu__item main-menu__item--child">
+                    <a href="" class="main-menu__link main-menu__link--child">
+                        Item 4
+                    </a>
+                </li>
+                <li class="main-menu__item main-menu__item--child">
+                    <a href="" class="main-menu__link main-menu__link--child">
+                        Item 5
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="main-menu__item">
+            <a href="" class="main-menu__link">
+                Item 3
+            </a>
+        </li>
+        <li class="main-menu__item">
+            <a href="" class="main-menu__link">
+                Item 4
+            </a>
+        </li>
+        <li class="main-menu__item">
+            <a href="" class="main-menu__link">
+                Item 5
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

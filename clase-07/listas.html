@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*
+            LISTAS :
+            Existen tres propiedades para las listas(se pueden aplicar a los <li> o tambien a los
+            <ul> o <ol>
+
+            list-style-position
+
+                outside (default) | inside
+
+            list-style-image
+
+                Atraves de la funcion url muestra una imagen en lugar de la viñeta
+                se prefieren para esto pseudoelementos o backgraound-image
+
+            list-style-type
+
+                Se usa para indicar el tipo de viñeta
+                         .disc
+                         .decimal
+                         .decimal-leading-zero
+                         .circle
+                         .square
+                         .etc
+                         .lower-alpha
+                         .lower-greek
+                         .lower-latin
+                         .lower-roman
+                         .upper-roman
+                         .etc...
+
+            Ademas existe un shorthand
+
+            list-style
+        */
+        .list{
+            border: 1px solid black;
+            list-style-type: none; /*desaparece viñetas*/
+            /*list-style-position: inside;*/
+            /*list-style-image: url(check.png); /*no recomendado*/
+        }
+        .list li{
+            /*background: lightblue;*/
+            margin-bottom: .5em;
+        }
+        .list li:before{
+            content: "";
+            display: inline-block; /*para poder aplicar width y heigth*/
+            width: 1em;
+            height: 1em;
+            background: url(check.png) 0 0 / contain;
+            vertical-align: middle; /*alineacion al centro del vertical*/
+            margin-right: .5em;
+        }*/
+
+    </style>
+</head>
+<body>
+    <h1>Listas</h1>
+    <ul class="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+</body>
+</html>

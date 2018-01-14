@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablas</title>
+    <style>
+
+        /*
+            Table-layout -> define como se maneja las dimensiones de la tabla y sus columnas(celdas)
+                Valores :
+                 *automatic
+                 *fidexd
+
+            Fixed depende de un ancho declarado para la tabla.Ademas si no se declara un ancho para
+            las columnas estas se distrubuye uniformemente
+
+            caption-side : top (default) | bottom
+            define donde se coloca el caption en la tabla
+
+            La propiedad border-collapse tiene dos propiedades :
+
+                *separate (default)
+                *collapsed (define si las celdas estan separadas o juntas esta propiedad lo junta)
+
+            border-spacing : indica la separacion entre las celdas si es que la tabla
+                    tieene border-collapsed:separete
+        */
+        .table{
+            border: 1px solid red;
+            table-layout: fixed; /*les da un mismo tamaño*/
+            width: 100%;
+            caption-side: bottom;
+            /*border-spacing: 1em;*/
+            border-collapse: collapse;
+        }
+        .col1{
+            background: yellow;
+        }
+        .table caption{
+            font-size: 1.5em;
+            color: red;
+            line-height: 1.5;
+        }
+        .table td,.table th{
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <caption>Este es el titulo</caption>
+        <colgroup>
+            <col class="col1">
+            <col class="col2">
+            <col class="col3">
+            <col class="col4">
+            <col class="col5">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
