@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex - items</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Flex - Items</h1>
+		<div class="container-1">
+			<div class="item-1">1</div>
+			<div class="item-1">2</div>
+			<div class="item-1">3</div>
+			<div class="item-1">4</div>
+			<div class="item-1">5</div>
+			<div class="item-1">6</div>
+			<div class="item-1">7</div>
+			<div class="item-1">8</div>
+			<div class="item-1">9</div>
+			<div class="item-1">10</div>
+		</div>
+	<p>Los flex-items de forma predeterminada intentan rellenar todo el espacio disponible en el main-axis.
+	Si el tamaño sumado de todos los flex-items supera al main-size, los  items se encogeran(por mas que
+	tengan una dimension declarada, width o heigth) </p>
+	<h2>"flex box"</h2>
+	<p>Los items son cajas flexibles (flexible boxes), significa que pueden crecer o encogerse segun las
+	circunstancias. Ignorando sus dimensiones declaradas</p>
+	<p>Exiten 3 propiedades que definen el main-size de un flex-item :</p>
+	<ul>
+		<li>flex-basis (indica el tamaño base)</li>
+		<li>flex-grow (define el crecimiento)</li>
+		<li>flex-shrink (define el encogimiento)</li>
+	</ul>
+	<h2>Dimensiones de los  flex-items</h2>
+	<h3>Cross-size</h3>
+		<ul>
+			<li>Si se a definido este se respeta.</li>
+			<li>Si no se ah definido hay dos opciones</li>
+				<ul>
+					<li>Si algin-items es strech o no se define , el cross-size sera todo el espacio disponible</li>
+					<li>Si aligin-items es diferente de strech( o los items estan varias filas) el cross-size es relativo
+					al contenido y al box-model</li>
+				</ul>
+		</ul>
+	<h3>Main-size</h3>
+		<p>Se calcula con flex-basis,flex-grow y flex-shrink</p>
+	<h4>flex-basis</h4>
+		<ul>
+			<li>es el tamaño base para un main-size</li>
+			<li>Esto significa que no siempre sera el tamaño calculado final</li>
+			<li>Flex-basis siempre gana sobre la  dimension relativa declarada
+				(excepto si esta en auto)</li>
+		</ul>
+	<div class="container-2">
+		<div class="item-2">1</div>
+		<div class="item-2">2</div>
+		<div class="item-2">3</div>
+		<div class="item-2">4</div>
+		<div class="item-2">5</div>
+	</div>
+	<h4>Flex-grow</h4>
+	<ul>
+		<li>Indica cuantas unidades crecera el item</li>
+		<li>su valor es un numero entero positivo</li>
+		<li>El valor de cada unidad se calcula dividiendo el espacio disponible entre las sumas de unidades
+		totales</li>
+		<li>Por defecto los flex-items comienzan con flex-grow:0</li>
+	</ul>
+	<p>*El espacio disponible es el espacio total del contenedor menos el espacio ocuapdo por los items y
+	sus margenes</p>
+
+	<div class="container-3">
+		<div class="item-1">1</div>
+		<div class="item-2">2</div>
+	</div>
+
+	<h4>Flex-shrink</h4>
+	<ul>
+		<li>Indica cuantas unidades se encogera un item</li>
+		<li>su valor es un numero entero positivo</li>
+		<li>El valor de cada unidad se calcula dividiendo el espacio disponible entre las sumas de unidades
+			totales</li>
+		<li>Por defecto los flex-items comienzan con flex-shrink:1</li>
+	</ul>
+
+	<h4>Shorthand "FLEX"</h4>
+		<p>Este shorthand combina flex-grow, flex-shrink y flex-basis (en ese orden por favor)</p>
+
+	<div class="container-4">
+		<div class="item-4">1</div>
+		<div class="item-4">2</div>
+		<div class="item-4">3</div>
+		<div class="item-4">4</div>
+		<div class="item-4">5</div>
+		<div class="item-4">6</div>
+		<div class="item-4">7</div>
+		<div class="item-4">8</div>
+		<div class="item-4">9</div>
+		<div class="item-4">10</div>
+		<div class="item-4">11</div>
+	</div>
+	<h3>Valores especiales de flex </h3>
+		<ul>
+			<li>flex:auto(1 1 auto)</li>
+			<li>flex:none(0 0 auto)</li>
+			<li>flex:N (N N auto)</li>
+		</ul>
+</body>
+</html>

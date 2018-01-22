@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>FlexBox</h1>
+    <p>Es un modelo de layout que requiere la relacion de un contenedor (llamado flex-container)
+    y de sus hijos (llamados flex-items). De esa manera, el flex-container define un contexto
+    al respecto al cual los flex-items van a organizarse y calcular sus dimensiones.</p>
+
+    <pre>
+        Formato Jade (Pug) (. son == clases)
+            .flex-container (Padre)
+                 .flex-item   (Hijo)
+                 .flex-item   (Hijo)
+                 .flex-item   (Hijo)
+                    .flex-item--child (Nieto)
+
+    </pre>
+    <p>En el ejemplo anterior flex-item--child no se considera un flex-item porque ellos
+    son "SOLO LOS HIJOS DIRECTOS" del flex-container </p>
+
+    <p>Un flex-item podria ser a su vez un flex-container y asi sucesivamente</p>
+    <pre>
+        .flex-item{     a la vez es item y container porque tiene un hijo el item flex-item--child
+            display:flex;
+        }
+    </pre>
+    <p>Ejemplo (item y container a la vez)</p>
+    <pre>
+        .container{
+            display:flex;
+        }
+        .container > .item{
+            display:flex;
+        }
+    </pre>
+
+</body>
+</html>

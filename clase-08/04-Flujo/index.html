@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flujo</title>
+	<style>
+		[class^="container"]{
+			border: 1px  solid black;
+			display: flex;
+		}
+		[class^="item"]{
+			background: pink;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		[class^="item"]:nth-child(even){
+			background: lightblue;
+		}
+
+		.item{
+			height: 60px;
+			width:  60px;
+		}
+		.item:nth-child(2){
+			order: -1;
+		 }
+
+		/***/
+
+		.container{
+			height: 300px;
+		}
+		.item:last-child{
+			align-self: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Flujo</h1>
+	<h2>flex-wrap</h2>
+	<p>Con esta propiedad se determina si los items se colocan en una sola fila (linea) o en varias.
+	Se aplica al container.</p>
+	<ul>
+		<li>flex-wrap:no-wrap (default , una sola lina)</li>
+		<li>flex-wrap:wrap (varias lineas)</li>
+		<li>flex-wrap:wrap-reverse (varias lineas en sentido inverso)</li>
+	</ul>
+	<h2>Order</h2>
+	<p>Esta propiedad permite mover un elemento en el flujo visual(no lo muever en el html).Todos
+	los elemento comienza con un order:0 y a mayor numero el elemento comienza despues</p>
+
+	<div class="container">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+	</div>
+	<h2>Align-content</h2>
+	<p>Esta propiedad es igual a align-item , pero se aplica cuando los items esta en varias lineas
+	(flex-wrap:wrap) se aplica al contenedor</p>
+	<ul>
+		<li>flex-start</li>
+		<li>flex-end</li>
+		<li>center</li>
+		<li>baseline</li>
+	</ul>
+	<h3>Align-self</h3>
+	<p>Sirve para colocar un elemento en un posicion especifica en el cross-axis. Se aplica a un elemento
+	especifico</p>
+</body>
+</html>

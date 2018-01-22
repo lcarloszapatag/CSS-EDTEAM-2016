@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Ejes   -- FLEX CONTAINER</h1>
+		<p>Cada vez que se define un flex-container este adquiere automaticamente dos ejes :</p>
+		<ul>
+			<li>Main axis (principal,horizontal por default)</li>
+			<li>Cross axis (secundario,vertical por default)</li>
+		</ul>
+	<p>De forma predeterminada los elementos (Flex-items) se alinean respecto al main axis.</p>
+		<img src="flexbox-axis.png" alt="Flex-Box">
+	<div class="container-demo">
+		<div class="item-demo">1</div>
+		<div class="item-demo">2</div>
+		<div class="item-demo">3</div>
+		<div class="item-demo">4</div>
+	</div>
+	<p>La direccion de los ejes puede cambiarse con la propiedad flex-direction(aplicada al container)</p>
+	<pre>
+		.container-demo{
+			display:flex;
+			flex-direction:row-reverse;
+		}
+	</pre>
+	<p>Los valores para direction son :</p>
+	<ul>
+		<li>row(por default left to rigth)</li>
+		<li>row-reverse(rigth to left)</li>
+		<li>column (top to bottom)</li>
+		<li>column-reverse (bottom to top)</li>
+	</ul>
+	<h2>Alinear elementos  respecto al main-axis</h2>
+		<p>Se usa la propiedad justify-content y tienen los siguientes valores :</p>
+			<ul>
+				<li>flex-start (al inicio)</li>
+				<li>flex-end   (al final )</li>
+				<li>center     (al medio)</li>
+				<li>space-between (divide el espacio sobrante y lo distribuye entre los items</li>
+				<li>space-around (divide  el epsacio sobrante y lo distribuye alrededor de los items</li>
+			</ul>
+	<div class="container-demo2">
+		<div class="item-demo">1</div>
+		<div class="item-demo">2</div>
+		<div class="item-demo">3</div>
+		<div class="item-demo">4</div>
+	</div>
+
+	<h3>Alinear los elementos respecto al cross-axis</h3>
+	<p>Para esto se usa la propiedad (del container) : <strong>align-items </strong>(cuando es una sola fila)
+		y <strong>align-content</strong>(cuando son dos o mas filas)</p>
+	<ul>
+		<li>flex-start</li>
+		<li>flex-end</li>
+		<li>center</li>
+		<li>stretch</li>
+		<li>baseline</li>
+	</ul>
+
+	<div class="container-demo3">
+		<div class="item-demo">1</div>
+		<div class="item-demo">2</div>
+		<div class="item-demo">3</div>
+		<div class="item-demo">4</div>
+	</div>
+
+	<p>Cuando un elementono tiene hijos y solo tiene texto adentro, el texto se convierte en un flex-item si
+	 es que el elemento se convierte en flex-container</p>
+
+	<div class="container-demo4">
+		<div class="item-demo">1</div>
+		<div class="item-demo">2</div>
+		<div class="item-demo">3</div>
+		<div class="item-demo">4</div>
+	</div>
+</body>
+</html>
