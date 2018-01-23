@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+.container{
+    border-bottom: 8px solid gray;
+    height: 100px;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; /*all se aplica a cualquier propiedad ue encuentre*/
+    position: absolute;
+    left: 0;
+}
+.container:hover .box{
+    left: calc(100% - 100px);  /*calc es una funcion de css , esta en la unica forma de recorrer el cuadrado
+    ya que el navegador calculo la pantalla en el tamaño donde este*/
+}
+button{
+    background: green;
+    color: white;
+    line-height: 3;
+    font-size: 1.3em;
+    border: none;
+    display: table;
+    margin: 2em auto;
+    padding: 0 1.5em;
+    -webkit-transition:  all .3s;
+    -o-transition:  all .3s;
+    transition:  all .3s;
+
+}
+button:hover{
+    background: red;
+    -webkit-transform: rotate(3deg) scale(1.2);
+    -ms-transform: rotate(3deg) scale(1.2);
+    transform: rotate(3deg) scale(1.2);
+
+}

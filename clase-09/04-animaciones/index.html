@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animaciones</title>
+	<link rel="stylesheet" href="style-dist.css">
+</head>
+<body>
+	<h1>Animaciones</h1>
+		<p>Son animaciones que no requieren un evento o un cambio de estado para ejecutarse</p>
+		<div class="disc">
+		</div>
+		<div class="start"></div>
+
+	<p>Para crear un animación se requiere dos pasos básicos</p>
+	<ul>
+		<li>1. Definir la animación en el elemento</li>
+		<li>2. Crear los  @keyframes</li>
+	</ul>
+	<p>La animacion requiere como minimo el nombre y la duracion</p>
+	<code>
+		animation: girarpe 2s;
+	</code>
+	<p>Se le pueden pasar mas valores como :</p>
+		<ul>
+			<li>infinite para que no detenga</li>
+			<li>alternate para que se anime de ida y vuelta</li>
+			<li>linear para que la velocidad sea constante</li>
+		</ul>
+	<code>
+		animation : girar 2s infinite alteernate linear;
+	</code>
+	<p>Los keyframes determinan los momentos en los que los estilos cambian. Lo mas facil es poner
+	 from {} y to {}. Pero tambien se podrian poner keyframes especificos en porcentajes</p>
+
+	<code>
+		@keyframes nombre_{
+			0%{
+				color:red
+			}
+			50%{
+				color:green
+			}
+			100%{
+				color:blue
+			}
+	</code>
+	<img src="http://lorempixel.com/200/200" alt="">
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+.box{
+    width: 300px;
+    height: 300px;
+    background: red;
+    margin: 8em auto;
+    color: #ffffff;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 300px;
+    text-transform: uppercase;
+
+    /*Transform*/
+    /*transform: scale(1);*/
+    /*transform: rotate(-10deg);*/
+    /*transform: translateY(100%);*/
+    transform: skew(10deg);
+
+}
+
+/*Ejemplo 2*/
+
+body{
+    margin: 0;
+}
+.skew{
+    width: 50px;
+    height: 250px;
+    background: tomato;
+    color: black;
+    font-size: 2em;
+    line-height: 250px;
+    text-align: center;
+    flex-grow: 1; /*para que los elementos tengantodo el ancho de la pagina pero hay un shorthand flex:1;*/
+    transform: skew(-20deg);
+    border-right: 6px solid #fff ;
+    overflow: hidden;
+}
+.skew:first-child{
+    border-left: 6px solid #ffffff;
+}
+.skew:nth-child(even){/*para los pares*/
+    background: deeppink;
+}
+.skew p{
+    margin: 0;
+    transform:skew(20deg);
+}
+.skew img{
+    transform: skew(20deg);
+    position: relative;
+    left: -10px;
+}
+.skew:hover{
+    flex-grow: 3;
+    transition: all .4s;
+}
+.container{
+    display: flex;
+    overflow: hidden; /*para quitar el scroll horizontal*/
+    background: teal;
+}
