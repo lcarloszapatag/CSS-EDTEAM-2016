@@ -1,0 +1,65 @@
+
+@mixin desde($size){
+  @media screen and(min-width: $size) {
+      @content;
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+
+}
+.main{
+  background: green;
+  flex: auto; /*con esto les hacemos crecer a donde puedan crecer*/
+  @include desde (640px){
+    width: 75%;
+  }
+  &-container{
+    flex: auto;
+    @include desde (640px){
+      display: flex;
+    }
+  }
+  &-header{
+    background: yellow  ;
+    height: 100px;
+  }
+  &-nav{
+    background: pink;
+  }
+  &-menu{
+    margin-top: 0;
+    margin-bottom: 0; /*recetiando*/
+    padding-left: 0;
+    list-style: none;
+    @include desde(480px){
+      display: flex;
+      &__item{
+        flex: auto;
+        text-align: center;
+        line-height: 2.5;
+      }
+    }
+  }
+  &-aside{
+    @extend .main;
+    background: orange;
+    @include desde (640px){
+      width: 25%;
+    }
+
+  }
+
+  &-footer{
+    @extend .main-header;/*heredando el heigth del main-header (cuidando la cascada siempre)*/
+    background: steelblue;
+    margin-top: auto;
+  }
+}

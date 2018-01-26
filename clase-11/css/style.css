@@ -1,0 +1,51 @@
+/*gulp sass para compilar sass y me cree el destino*/
+code {
+  overflow: auto;
+  display: block;
+  padding: 1em;
+  background: rgba(173, 216, 230, 0.5);
+  font-size: 1.4em;
+  color: #333333; }
+
+/*body{
+  background: red;
+  @media screen and (min-width: 400px) {
+      background: green;
+  }
+  @media screen  and (min-width: 700px){
+      background: yellow;
+  }
+  @media screen  and (min-width: 1000px){
+      background: purple;
+  }
+}
+*/
+header {
+  background: red; }
+  @media screen and (min-width: 400px) {
+    header {
+      /*min-width lo recomendado para mobile first*/
+      background: yellow; } }
+  @media screen and (min-width: 800px) {
+    header {
+      /*min-width lo recomendado para mobile first*/
+      background: green; } }
+
+/*
+  Mixin de ed-grid
+@mixin desde($size){
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+@mixin hasta($size){
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+@mixin desde-hasta($desde,$hasta){
+  @media screen and (min-width: $desde) and (max-width: $hasta){
+    @content;
+  }
+}
+*/

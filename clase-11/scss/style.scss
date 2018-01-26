@@ -1,0 +1,60 @@
+/*gulp sass para compilar sass y me cree el destino*/
+body{
+}
+code{
+
+  overflow: auto;
+  display: block;
+  padding: 1em;
+  background: rgba(lightblue,.5);
+  font-size: 1.4em;
+  color: #333333;
+}
+
+/*body{
+  background: red;
+  @media screen and (min-width: 400px) {
+      background: green;
+  }
+  @media screen  and (min-width: 700px){
+      background: yellow;
+  }
+  @media screen  and (min-width: 1000px){
+      background: purple;
+  }
+}
+*/
+@mixin bp($size){ //Parametro
+  @media screen and (min-width: $size){ /*min-width lo recomendado para mobile first*/
+      @content; //esto significa que cuando metamos el mixin podamos meter contenido adentro
+  }
+}
+header{
+  background: red;
+  @include bp(400px){
+    background: yellow;
+  }
+  @include bp(800px){
+    background: green;
+  }
+}
+
+/*
+  Mixin de ed-grid
+@mixin desde($size){
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+@mixin hasta($size){
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+@mixin desde-hasta($desde,$hasta){
+  @media screen and (min-width: $desde) and (max-width: $hasta){
+    @content;
+  }
+}
+*/
+
