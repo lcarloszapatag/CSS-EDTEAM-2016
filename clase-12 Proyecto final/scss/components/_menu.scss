@@ -1,0 +1,47 @@
+$off-canvas-width: 20em;
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: -$off-canvas-width;
+  background: $color3;
+  z-index: 200;
+  height: 100vh;
+  padding: 1em;
+  width: $off-canvas-width;
+  transition: all .3s;
+  &.mostrar {
+    right: 0;
+  }
+}
+
+.main-menu {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+
+  &__item {
+    border-bottom: 1px solid rgba($color1,.2);
+  }
+  &__link {
+    text-decoration: none;
+    font-family: $font-title;
+    font-weight: $light;
+    text-transform: uppercase;
+    display: block;
+    line-height: 2.5;
+  }
+}
+
+// Mover el body al mostrar el menu
+
+body {
+  position: relative;
+  transition: all .3s;
+  right: 0;
+  &.mostrar {
+    right: $off-canvas-width;
+  }
+}
